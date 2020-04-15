@@ -17,7 +17,6 @@ cd $OUT_DIR
 PREFIX=$(basename "$BAM" .bam)
 
 FASTQ_UNM=${OUT_DIR}/${PREFIX}_extended_unmapped.fastq
-FASTQ_candidate_rDNA=${OUT_DIR}/${PREFIX}_candidate_rDNA.fastq
 FASTQ_MT=${OUT_DIR}/${PREFIX}_MT.fastq
 
 
@@ -45,14 +44,7 @@ done<non.human.references.txt
 samtools view -bh $BAM MT | samtools fastq - >$FASTQ_MT
 
 
-rm -fr $FASTQ_candidate_rDNA
-while read line
-do 
-chr=$(echo $line | awk -F "," '{print $1}')
-x=$(echo $line | awk -F "," '{print $2}')
-y=$(echo $line | awk -F "," '{print $3}')
-echo "samtools view -bh $BAM $chr:$x-$y | samtools fastq - >>$FASTQ_candidate_rDNA">>master_${PREFIX}.sh
-done</PHShome/sv188/code/sbt/db.human/rDNA.kmers.75.clean.filtered.bed
+
 
 
 
