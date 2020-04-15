@@ -66,7 +66,6 @@ echo "/PHShome/sv188/sbt/sbt_mtDNA.sh $FASTQ_MT ${OUT_DIR}/${PREFIX}_mtDNA/">>ma
 echo "/PHShome/sv188/sbt/sbt_needle.sh $FASTQ_UNM ${OUT_DIR}/${PREFIX}_needle/">>master_${PREFIX}.sh
 echo "/PHShome/sv188/sbt/sbt_imrep.sh ${BAM} ${OUT_DIR}/${PREFIX}_imrep/">>master_${PREFIX}.sh
 
-echo "/PHShome/sv188/sbt/sbt_offtarget_cov.sh ${BAM} ${OUT_DIR}/${PREFIX}_offcov/">>master_${PREFIX}.sh
 chmod 755 master_${PREFIX}.sh 
 ./master_${PREFIX}.sh 
 
