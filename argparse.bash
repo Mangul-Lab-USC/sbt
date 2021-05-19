@@ -50,11 +50,11 @@ EOF
     # Define variables corresponding to the options if the args can be
     # parsed without errors; otherwise, print the text of the error
     # message.
-    if /PHShome/sv188/anaconda3/bin/python "$argparser" "$@" &> /dev/null; then
-        eval $(/PHShome/sv188/anaconda3/bin/python "$argparser" "$@")
+    if python "$argparser" "$@" &> /dev/null; then
+        eval $(python "$argparser" "$@")
         retval=0
     else
-        /PHShome/sv188/anaconda3/bin/python "$argparser" "$@"
+        python "$argparser" "$@"
         retval=1
     fi
 
