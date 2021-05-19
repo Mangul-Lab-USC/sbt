@@ -5,7 +5,7 @@
 
 - Step 1 - Install [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
 - Step 2 - Download the SBT tool
-  - git clone https://github.com/jaquejbrito/sbt
+  - git clone https://github.com/Mangul-Lab-USC/sbt.git
   - cd sbt
   - ./install.sh
 - Step 3 - Download the SBT [database](https://figshare.com/articles/dataset/Database_files_for_the_software_tool_SBT_Seeing_Beyond_the_Target_/14342414)
